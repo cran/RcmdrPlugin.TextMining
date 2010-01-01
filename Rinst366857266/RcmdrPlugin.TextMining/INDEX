@@ -1,0 +1,53 @@
+RcmdrPlugin.TextMining-package
+                        R-Commander plugin package that provide GUI for
+                        (tm) package
+TDM                     Dialog for function TermDocumentMatrix() from
+                        package (tm)
+cAsoc                   Dialog for function findAssocs() from package
+                        (tm)
+cChunks                 Dialog for function makeChunks() from package
+                        (tm)
+cDelete                 Dialog for function rm() from package (base)
+cDict                   Dialog for function Dictionary() from package
+                        (tm)
+cDiss                   Dialog for function dissimilarity() from
+                        package (tm)
+cDissDoc                Dialog for function dissimilarity() from
+                        package (tm)
+cFreq                   Dialog for function findFreqTerms() from
+                        package (tm)
+cInspect                Dialog for function inspect() from package (tm)
+cInter                  Dialog for function tm_intersect() from package
+                        (tm)
+cPlain                  Dialog for function as.PlainTextDocument() from
+                        package (tm)
+cPlot                   Dialog for function plot() from package (tm)
+cRN                     Dialog for function removeNumbers() from
+                        package (tm)
+cRP                     Dialog for function removePunctuation() from
+                        package (tm)
+cSFT                    Dialog for function tm_filter() from package
+                        (tm)
+cSparse                 Dialog for function removeSparseTerms() from
+                        package (tm)
+cStem                   Dialog for function stemDocument() from package
+                        (tm)
+cSummary                Dialog for function summary() from package
+                        (base)
+cTolower                Dialog for function tolower() from package
+                        (base)
+cUtf8                   Dialog for function enc2utf8() from package
+                        (base)
+cWhite                  Dialog for function stripWhitespace() from
+                        package (tm)
+cWords                  Dialog for function removeWords() from package
+                        (tm)
+cWrite                  Dialog for function writeCorpus() from package
+                        (tm)
+cmData                  Dialog for function meta() from package (tm)
+dirSource               Dialog for function DirSource() from package
+                        (tm)
+gSource                 Dialog for function GmaneSource() from package
+                        (tm)
+rsSource                Dialog for function ReutersSource() from
+                        package (tm)

@@ -1,0 +1,66 @@
+# Rcmdr menus for the "RcmdrPlugin.TextMining" package
+# When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
+
+# last modified: 16 July 2010 by Džemil Lušija
+
+
+#   type    menu/item      operation/parent  label                                          command/menu                activation  install?
+
+
+#Text mining
+menu    tmMenu       topMenu         ""                                      ""                          ""                      "" 
+item    topMenu      cascade         "TextMining"                         tmMenu                  ""                      "packageAvailable('tm')"
+
+menu    createMenu   tmMenu         ""                                   ""                       ""                       ""
+item    tmMenu      cascade         "Create corpus"                      createMenu                  ""                    ""
+    item    createMenu       command         "Creating DirSource..."              dirSource               ""                      "packageAvailable('tm')"
+    item    createMenu       command         "Creating GmaneSource..."            gSource                 ""                      "packageAvailable('tm')"
+    item    createMenu       command         "Creating ReutersSource..."          rsSource                ""                      "packageAvailable('tm')"
+
+item    tmMenu       command         "Delete corpus..."                     cDelete                       ""                     "packageAvailable('tm')"
+
+menu    ceditMenu    tmMenu          ""                                    ""                       ""                     ""
+item    tmMenu       cascade         "Edit corpus"                         ceditMenu                ""                     ""
+    item    ceditMenu       command         "MetaData..."                        cmData                  ""                      "packageAvailable('tm')"
+    item    ceditMenu       command         "Write corpus..."                    cWrite                  ""                      "packageAvailable('tm')"
+    item    ceditMenu       command         "Make chunks..."                     cChunks                 ""                      "packageAvailable('tm')"
+    item    ceditMenu       command         "Inspect corpus..."                  cInspect                ""                      "packageAvailable('tm')"
+    item    ceditMenu       command         "Corpus summary..."                  cSummary                ""                      "packageAvailable('tm')"
+  
+menu    transMenu    tmMenu          ""                                   ""                        ""                     ""
+item    tmMenu       cascade         "Transformations"                      transMenu               ""                     ""
+    item    transMenu       command         "To plain text documents..."        cPlain                  ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Convert to UTF-8..."                cUtf8                   ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Remove numbers..."                  cRN                     ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Remove punctuation..."              cRP                     ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Remove words     ..."               cWords                  ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Stem documents..."                  cStem                   ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Strip whitespaces..."               cWhite                  ""                      "packageAvailable('tm')"
+#    item    transMenu       command         "Replace words..."                   cRwords                 ""                      "packageAvailable('tm')"
+    item    transMenu       command         "Convert to lowercase..."            cTolower                ""                      "packageAvailable('tm')"
+#    item    transMenu       command         "Stem completion..."                 cSC                     ""                      "packageAvailable('tm')"
+
+menu    filterMenu    tmMenu          ""                                   ""                       ""                     ""
+item    tmMenu       cascade         "Filters"                             filterMenu               ""                     ""
+    item    filterMenu      command         "Search full text..."                cSFT                    ""                      "packageAvailable('tm')"
+#    item    filterMenu      command         "Statement Filter..."                cFilter                 ""                      "packageAvailable('tm')"
+    item    filterMenu      command         "Intersection..."                    cInter                  ""                      "packageAvailable('tm')"
+
+menu    tdmMenu     tmMenu          ""                                   ""                         ""                     ""
+item    tmMenu      cascade         "TermDocumentMatrix"                      tdmMenu               ""                     ""
+    item    tdmMenu       command           "Create TermDocumentMatrix..."        TDM                     ""                      "packageAvailable('tm')"
+    item    tdmMenu       command           "Creating Dictionary..."              cDict                   ""                      "packageAvailable('tm')"
+    item    tdmMenu       command           "Find associations..."                cAsoc                   ""                      "packageAvailable('tm')"
+    item    tdmMenu       command           "Find frequent terms..."              cFreq                   ""                      "packageAvailable('tm')"
+    item    tdmMenu       command           "Remove sparse terms..."              cSparse                 ""                      "packageAvailable('tm')"
+
+menu    dissMenu    tmMenu          ""                                   ""                         ""                     ""
+item    tmMenu      cascade         "Dissimilarity"                            dissMenu                   ""                      ""
+    item    dissMenu      command           "For TermDocumentMatrix..."            cDiss                  ""                      "packageAvailable('tm')"
+    item    dissMenu      command           "For text documents..."                cDissDoc               ""                      "packageAvailable('tm')"
+item    tmMenu       command         "Plot..."                     cPlot                            ""                            "packageAvailable('tm')"
+
+menu    hlpMenu     tmMenu          ""                                   ""                          ""                    ""
+item    tmMenu      cascade          "Help"                                     hlpMenu                    ""                     "packageAvailable('tm')"
+    item    hlpMenu       command          "About RcmdrPlugin.TextMining"         helpAbout                ""                     "packageAvailable('tm')"
+    item    hlpMenu       command          "RcmdrPlugin.TextMining (PDF)"         manual                   ""                     "packageAvailable('tm')"

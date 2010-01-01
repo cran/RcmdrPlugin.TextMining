@@ -1,0 +1,1 @@
+tar --force-local -chf 'C://RcmdrPlugin.TextMining_0.1-0.tar' RcmdrPlugin.TextMining 
